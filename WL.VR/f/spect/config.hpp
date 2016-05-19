@@ -1,6 +1,7 @@
 #define BACKGROUND_COLOR {0.059,0.059,0.059,1}
 #define PRIMARYCOLOR {0.918,0.655,0.141,1}
-class RscSpectListBox {
+class RscSpectListBox
+{
     access = 0;
     type = 5;
     w = 0.4;
@@ -17,7 +18,8 @@ class RscSpectListBox {
     soundSelect[] = {"", 0.1, 1};
     arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
     arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
-    class ListScrollBar {
+    class ListScrollBar
+    {
         color[] = {1, 1, 1, 0.6};
         colorActive[] = {1, 1, 1, 1};
         colorDisabled[] = {1, 1, 1, 0.3};
@@ -40,7 +42,8 @@ class RscSpectListBox {
     autoScrollDelay = 5;
     autoScrollRewind = 0;
 };
-class RscSpectFrame {
+class RscSpectFrame
+{
     type = 0;
     idc = -1;
     style = 64;
@@ -50,7 +53,6 @@ class RscSpectFrame {
     font = "PuristaMedium";
     sizeEx = 0.02;
     text = "";
-
 };
 class RscSpectMapControl
 {
@@ -411,7 +413,8 @@ class RscSpectPic
     text = "#(argb,8,8,3)color(0.918,0.655,0.141,1)";
     lineSpacing = 1; //required for multi-line style
 };
-class RscSpectButton {
+class RscSpectButton
+{
     access = 0;
     borderSize = 0.001 * safezoneW;
     colorBorder[] = PRIMARYCOLOR;
@@ -445,8 +448,9 @@ class RscSpectButton {
     w = 0.095589;
     x = 0;
     y = 0;
-    };
-    class RscSpectStructuredText {
+};
+class RscSpectStructuredText
+{
     access = 0;
     h = 0.035;
     idc = -1;
@@ -461,7 +465,8 @@ class RscSpectButton {
     x = 0;
     y = 0;
 };
-class RscSpectIGUIBack {
+class RscSpectIGUIBack
+{
     type = 0;
     idc = 124;
     style = 128;
@@ -476,7 +481,8 @@ class RscSpectIGUIBack {
     h = 0.1;
     colorbackground[] = {"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])", "(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])", "(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"};
 };
-class RscSpectText {
+class RscSpectText
+{
     access = 0;
     type = 0;
     idc = -1;
@@ -495,7 +501,8 @@ class RscSpectText {
     SizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     linespacing = 1;
 };
-class RscSpectControlsGroup {
+class RscSpectControlsGroup
+{
     type = 15;
     idc = -1;
     style = 0;
@@ -503,26 +510,29 @@ class RscSpectControlsGroup {
     y = 0;
     w = 1;
     h = 1;
-    class VScrollbar  {
+    class VScrollbar
+    {
     	color[] = {1,1,1,1 };
     	width = 0.021000;
     	autoScrollSpeed = -1;
     	autoScrollDelay = 5;
     	autoScrollRewind = 0;
     };
-    class HScrollbar {
+    class HScrollbar
+    {
     	color[] = {1, 1, 1, 1};
     	height = 0.028;
     };
-    class ListScrollBar  {
-        arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-        arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-        border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-        color[] = {1,1,1,0.6};
-        colorActive[] = {1,1,1,1};
-        colorDisabled[] = {1,1,1,0.3};
-        shadow = 0;
-        thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+    class ListScrollBar
+    {
+      arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+      arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+      border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+      color[] = {1,1,1,0.6};
+      colorActive[] = {1,1,1,1};
+      colorDisabled[] = {1,1,1,0.3};
+      shadow = 0;
+      thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
     class Controls {};
 };
@@ -573,7 +583,6 @@ class RscSpectList
     autoScrollSpeed = 0;
     autoScrollDelay = 0;
     autoScrollRewind = 0;
-
 };
 
 class RscSpectCombo
@@ -615,10 +624,10 @@ class RscSpectCombo
         shadow = 0;
         thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
-
 };
 
-class f_spec_dialog {
+class f_spec_dialog
+{
     idd = 9228;
     movingEnable = 1;
     enableSimulation = 1;
@@ -629,8 +638,10 @@ class f_spec_dialog {
     onKeyDown = "[""KeyDown"",_this] call F_fnc_EventHandler";
     onKeyUp= "[""KeyUp"",_this] call F_fnc_EventHandler";
     onUnload = "[] spawn f_fnc_OnUnload";
-  	class controlsBackground {
-    		class mouseHandler: RscSpectControlsGroup {
+  	class controlsBackground
+    {
+    		class mouseHandler: RscSpectControlsGroup
+        {
             class ListScrollBar
             {
                 color[] = {1,1,1,0.6};
@@ -700,7 +711,8 @@ class f_spec_dialog {
            // text = "<br /> Use the mouse or the WASD to control the camera, H to show and close the help window.<br /> Press M for the map.<br /> ";
         };
   	};
-    class controls {
+    class controls
+    {
         class SpectButtonExit: RscSpectButton
         {
             idc = 1315;
@@ -738,7 +750,6 @@ class f_spec_dialog {
             onButtonClick = "[_this select 0,0] call f_fnc_HandleMenu";
             onMouseHolding = "f_cam_menuShownTime=time";
             onMouseMoving = "f_cam_menuShownTime=time";
-
         };
         class SideFilterButton: RscSpectButton
         {
@@ -862,7 +873,6 @@ class f_spec_dialog {
             h = 1 * safezoneH;
             onDraw = "_this call F_fnc_DrawMarkers";
             onMouseButtonClick = "_this call F_fnc_OnMapClick";
-
         };
     };
 };
