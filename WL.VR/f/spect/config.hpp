@@ -619,18 +619,18 @@ class RscSpectCombo
 };
 
 class f_spec_dialog {
-	idd = 9228;
-	movingEnable = 1;
+    idd = 9228;
+    movingEnable = 1;
     enableSimulation = 1;
     enableDisplay = 1;
-	fadein = 0;
-	fadeout = 0;
+    fadein = 0;
+    fadeout = 0;
     duration = 2147483647;
     onKeyDown = "[""KeyDown"",_this] call F_fnc_EventHandler";
     onKeyUp= "[""KeyUp"",_this] call F_fnc_EventHandler";
     onUnload = "[] spawn f_fnc_OnUnload";
-	class controlsBackground {
-		class mouseHandler: RscSpectControlsGroup {
+  	class controlsBackground {
+    		class mouseHandler: RscSpectControlsGroup {
             class ListScrollBar
             {
                 color[] = {1,1,1,0.6};
@@ -641,15 +641,15 @@ class f_spec_dialog {
                 arrowEmpty = "";
                 border = "";
             };
-			onMouseButtonDown = "[""MouseButtonDown"",_this] call F_fnc_EventHandler";
-			onMouseButtonUp = "[""MouseButtonUp"",_this] call F_fnc_EventHandler";
+    			  onMouseButtonDown = "[""MouseButtonDown"",_this] call F_fnc_EventHandler";
+    			  onMouseButtonUp = "[""MouseButtonUp"",_this] call F_fnc_EventHandler";
             onMouseZChanged = "[""MouseZChanged"",_this] call F_fnc_EventHandler";
             onMouseMoving = "['MouseMoving',_this] call F_fnc_EventHandler";
-		    idc = 123;
+    		    idc = 123;
             x = SafeZoneX; y = SafeZoneY;
             w = SafeZoneW; h = SafeZoneH;
-		    colorBackground[] = {0.2, 0.0, 0.0, 0.0};
-		};
+    		    colorBackground[] = {0.2, 0.0, 0.0, 0.0};
+    		};
         class OnEnterBox : RscSpectButton
         {
             idc = 4344;
@@ -657,8 +657,8 @@ class f_spec_dialog {
             y = -0.1 * safezoneH + safezoneY;
             w = 0.4 * safezoneW;
             h = 0.2 * safezoneH;
-        //    onMouseEnter = "[true] spawn f_fnc_showMenu;f_cam_menuShownTime=time;";
-           // onMouseExit = "[false] spawn f_fnc_showMenu;";
+            // onMouseEnter = "[true] spawn f_fnc_showMenu;f_cam_menuShownTime=time;";
+            // onMouseExit = "[false] spawn f_fnc_showMenu;";
             onMouseHolding = "f_cam_menuShownTime=time";
             onMouseMoving = "f_cam_menuShownTime=time";
             borderSize = 0;
@@ -699,8 +699,7 @@ class f_spec_dialog {
             h = 0.375858 * safezoneH;
            // text = "<br /> Use the mouse or the WASD to control the camera, H to show and close the help window.<br /> Press M for the map.<br /> ";
         };
-
-	};
+  	};
     class controls {
         class SpectButtonExit: RscSpectButton
         {
@@ -783,7 +782,7 @@ class f_spec_dialog {
             onMouseHolding = "f_cam_menuShownTime=time";
             onMouseMoving = "f_cam_menuShownTime=time";
         };
-		class TracerButton: RscSpectButton
+		    class TracerButton: RscSpectButton
         {
             idc = 2511;
             x = 0.21083758 * safezoneW + safezoneX;
@@ -797,7 +796,7 @@ class f_spec_dialog {
             onMouseHolding = "f_cam_menuShownTime=time";
             onMouseMoving = "f_cam_menuShownTime=time";
         };
-		class ZeusButton: RscSpectButton
+		    class ZeusButton: RscSpectButton
         {
             idc = 2512;
             x = 0.2529126 * safezoneW + safezoneX;
