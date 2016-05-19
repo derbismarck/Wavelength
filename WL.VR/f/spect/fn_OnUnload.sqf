@@ -67,7 +67,7 @@ _helpWindow ctrlSetStructuredText parseText (f_cam_helptext);
 ctrlShow [1315, !ctrlVisible 1315];
 ctrlShow [1310, !ctrlVisible 1310];
 ctrlShow [1300, !ctrlVisible 1300];
-ctrlShow [1305, !ctrlVisible 1305];
+//ctrlShow [1305, !ctrlVisible 1305];
 
 f_cam_menuWorking = true;
 f_cam_menuShown = false;
