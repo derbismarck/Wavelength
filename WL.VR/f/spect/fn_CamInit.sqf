@@ -180,6 +180,12 @@ f_cam_menuWorking = true; [] spawn {sleep 1; f_cam_menuWorking = false;};
 f_cam_sideButton = 0; // 0 = ALL, 1 = BLUFOR , 2 = OPFOR, 3 = INDFOR , 4 = Civ
 f_cam_sideNames = ["All Sides","Blufor","Opfor","Indfor","Civ"];
 // ====================================================================================
+// Reinforcement Menu (right side)
+f_cam_reinforcement_menuControls = [/*FILL ME WITH GOOD VALUES, BRO*/];
+f_cam_reinforcement_menuShownTime = 0;
+f_cam_reinforcement_menuShown = true;
+f_cam_reinforcement_menuWorking = true; [] spawn {sleep 1; f_cam_reinforcement_menuWorking = false;};
+// ====================================================================================
 // Colors
 
 f_cam_blufor_color = [BLUFOR] call bis_fnc_sideColor;
