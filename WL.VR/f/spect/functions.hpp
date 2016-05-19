@@ -17,4 +17,5 @@ class fspectator
 	class RemoveHandlers{};
 	class HandleMenu{};
 	class showMenu{};
+	class showReinforcementMenu{};
 };

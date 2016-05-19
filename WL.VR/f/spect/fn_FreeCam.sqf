@@ -3,6 +3,7 @@ private ["_commitTime","_delta","_zLevel","_pos","_visPos","_mode","_currPos","_
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 // Menu shown/hidden
+
 if(abs (f_cam_menuShownTime - time) <= 0.1 && !f_cam_menuShown) then // disable due to being a bit wonky
 {
 	[true] spawn f_fnc_showMenu;
@@ -11,7 +12,14 @@ if(abs (f_cam_menuShownTime - time) >= 1 && f_cam_menuShown) then // disable due
 {
 	[false] spawn f_fnc_showMenu;
 };
-
+if(abs (f_cam_reinforcement_menuShownTime - time) <= 0.1 && !f_cam_reinforcement_menuShown) then
+{
+	[true] spawn f_fnc_showReinforcementMenu;
+};
+if(abs (f_cam_reinforcement_menuShownTime - time) >= 1 && f_cam_reinforcement_menuShown) then
+{
+	[false] spawn f_fnc_showReinforcementMenu;
+};
 
 // ====================================================================================
 // if freemode.
@@ -138,12 +146,12 @@ if(f_cam_mode == 3) then
 	};
 
 	//Max speed 50 m/s
-	_mX = _delta * ((_mX min 50) max -50); 
+	_mX = _delta * ((_mX min 50) max -50);
 	_mY = _delta * ((_mY min 50) max -50);
 	f_freecam_x_speed = f_freecam_x_speed * 0.5 + _mX;
 	f_freecam_y_speed = f_freecam_y_speed * 0.5 + _mY;
 	f_freecam_z_speed = f_freecam_z_speed * 0.5 + _mZ;
-	
+
 	_x = (_currPos select 0) + (f_freecam_x_speed * (cos f_cam_angleX)) + (f_freecam_y_speed * (sin f_cam_angleX));
 	_y = (_currPos select 1) - (f_freecam_x_speed * (sin f_cam_angleX)) + (f_freecam_y_speed * (cos f_cam_angleX));
 	_newHeight = (getTerrainHeightASL [_x,_y]);
