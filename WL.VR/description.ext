@@ -23,7 +23,7 @@ class Header
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 
 onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with Osiris WL";
+onLoadMission = "Made with Athena WL";
 author = "*** Insert mission author name here. ***";
 loadScreen = "loadLogo.jpg";
 
@@ -252,6 +252,15 @@ class Params
 		code = "if (%1 == 0) then {tawvd_addon_disable = true;}";
 	};
 
+	class f_param_autoTeleport
+	{
+		title = "Auto-teleport of JIP Clients";
+		values[] = {1,0};
+		texts[] = {"Enabled","Disabled"};
+		default = 1;
+		code = "f_param_autoTeleport = %1";
+	};
+
 // ============================================================================================
 
 // F3 - End of Params code blocks.
@@ -376,11 +385,4 @@ class CfgFunctions
 #include "f\respawn\dialogs.hpp"
 
 
-// ============================================================================================
-
-// F3 - Custom Insignia
-
-class CfgUnitInsignia {
-	#include "f\assignGear\insignia\define.hpp"
-};
 // ============================================================================================
